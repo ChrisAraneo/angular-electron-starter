@@ -1,17 +1,17 @@
-import { app, BrowserWindow } from 'electron/main';
-import { join } from 'node:path';
+const { app, BrowserWindow } = require('electron/main');
+const path = require('node:path');
 
 function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      preload: join(__dirname, 'preload.js'),
+      preload: path.join(__dirname, 'preload.js'),
     },
   });
 
   win.loadFile(
-    join(__dirname, '/dist/angular-electron-starter/browser/index.html'),
+    path.join(__dirname, '/dist/angular-electron-starter/browser/index.html'),
   );
 }
 
