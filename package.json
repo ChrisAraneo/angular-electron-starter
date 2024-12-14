@@ -9,6 +9,7 @@
     "start:web": "ng serve",
     "format": "prettier --write \"**/*.{ts,json,js,mjs}\"",
     "lint": "ng lint",
+    "chores": "npm run lint && npm run format",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
